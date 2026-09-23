@@ -101,8 +101,8 @@ export default function HeroSection() {
       <div className="absolute top-1/3 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#c2a382]/10 rounded-full blur-[140px] z-10" />
 
       {/* ═══ Main Content ═══ */}
-      {/* flex-1 ensures this takes available space, mt-auto pushes it down, but with adjusted padding */}
-      <div className="relative z-20 flex-1 flex items-end w-full px-5 sm:px-10 lg:px-16 xl:px-24 pb-20 sm:pb-28 md:pb-32">
+      {/* Mobile par bottom padding kam ki (pb-12), tablet/desktop par same rakhi */}
+      <div className="relative z-20 flex-1 flex items-end w-full px-5 sm:px-10 lg:px-16 xl:px-24 pb-12 sm:pb-24 md:pb-32">
         <div className="w-full max-w-3xl">
           <h1
             className="text-[1.75rem] sm:text-4xl md:text-5xl lg:text-6xl font-black text-[#f4efeb] leading-[1.1] tracking-tight mb-4 sm:mb-5"
@@ -181,7 +181,6 @@ export default function HeroSection() {
       </div>
 
       {/* ═══ BOTTOM MARQUEE ═══ */}
-      {/* Removed 'absolute' positioning, now it sits naturally at the bottom of flex column */}
       <div className="relative z-20 w-full mt-auto">
         <div className="relative h-px overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#c2a382]/40 to-transparent" />
