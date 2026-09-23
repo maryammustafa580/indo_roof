@@ -70,7 +70,7 @@ export default function HeroSection() {
   ];
 
   return (
-    <section className="relative w-full min-h-screen overflow-hidden bg-[#3c3835] font-sans">
+    <section className="relative w-full min-h-[100dvh] overflow-hidden bg-[#3c3835] font-sans flex flex-col">
       {/* Google Fonts */}
       <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,600;1,700&family=Montserrat:wght@200;300;400;500;600;700&display=swap"
@@ -101,9 +101,9 @@ export default function HeroSection() {
       <div className="absolute top-1/3 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#c2a382]/10 rounded-full blur-[140px] z-10" />
 
       {/* ═══ Main Content ═══ */}
-      <div className="relative z-20 flex items-end min-h-screen px-5 sm:px-10 lg:px-16 xl:px-24 pb-32 sm:pb-40">
+      {/* flex-1 ensures this takes available space, mt-auto pushes it down, but with adjusted padding */}
+      <div className="relative z-20 flex-1 flex items-end w-full px-5 sm:px-10 lg:px-16 xl:px-24 pb-20 sm:pb-28 md:pb-32">
         <div className="w-full max-w-3xl">
-
           <h1
             className="text-[1.75rem] sm:text-4xl md:text-5xl lg:text-6xl font-black text-[#f4efeb] leading-[1.1] tracking-tight mb-4 sm:mb-5"
             style={{ fontFamily: "'Playfair Display', 'Baskerville', serif" }}
@@ -125,8 +125,7 @@ export default function HeroSection() {
 
           {/* ═══ Buttons ═══ */}
           <div className="flex flex-row gap-2 sm:gap-3.5">
-
-            {/* Primary — Get Free Quote (navigates to /contact) */}
+            {/* Primary — Get Free Quote */}
             <div className="group relative inline-flex flex-1 sm:flex-none">
               <div className="absolute -inset-1 rounded-xl bg-gradient-to-r from-[#c2a382] via-[#d4b896] to-[#c2a382] opacity-40 group-hover:opacity-75 blur-xl transition-opacity duration-500 animate-pulse" />
               <div className="absolute -inset-[2px] rounded-xl bg-gradient-to-r from-[#c2a382] via-[#e6d5bc] to-[#c2a382] bg-[length:200%_100%] animate-[border-flow_3s_linear_infinite] opacity-100" />
@@ -182,15 +181,14 @@ export default function HeroSection() {
       </div>
 
       {/* ═══ BOTTOM MARQUEE ═══ */}
-      <div className="absolute bottom-0 left-0 right-0 z-20">
-
+      {/* Removed 'absolute' positioning, now it sits naturally at the bottom of flex column */}
+      <div className="relative z-20 w-full mt-auto">
         <div className="relative h-px overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#c2a382]/40 to-transparent" />
           <div className="absolute top-0 h-px w-32 bg-gradient-to-r from-transparent via-[#e6d5bc] to-transparent animate-[shine-line_3s_ease-in-out_infinite]" />
         </div>
 
         <div className="relative backdrop-blur-2xl border-t border-[#f4efeb]/5 overflow-hidden">
-
           <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#c2a382]/12 via-[#c2a382]/4 to-transparent pointer-events-none" />
           <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#c2a382]/30 to-transparent" />
 
